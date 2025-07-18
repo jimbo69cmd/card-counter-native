@@ -4,13 +4,17 @@
     "slug": "card-counter-native",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icon.png",
     "scheme": "cardcounternative",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.HiloCardCounter.cardcounternative" 
+      "bundleIdentifier": "com.HiloCardCounter.cardcounternative",
+      "buildNumber": "3",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -40,12 +44,18 @@
         "react-native-google-mobile-ads",
         {
           "androidAppId": "ca-app-pub-7038105706744077~6827675293",
-          "iosAppId": "ca-app-pub-7038105706744077~9575142030"
+          "iosAppId": "ca-app-pub-7038105706744077~6827675293"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5d9452b3-d584-4e1a-92fe-1ad8420fa7ba"
+      }
     }
   }
 }

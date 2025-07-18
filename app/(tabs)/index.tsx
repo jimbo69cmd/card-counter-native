@@ -17,14 +17,21 @@ import mobileAds, { BannerAd, BannerAdSize, InterstitialAd, AdEventType, TestIds
 
 interface BlackjackCounterProps {}
 
-// Ad Unit IDs - Now correctly using TestIds from react-native-google-mobile-ads
+// Ad Unit IDs - These are your LIVE production Ad Unit IDs for both Android and iOS.
 const adUnitIds = {
-  // Use TestIds for development, your real IDs for production
-  // It's good practice to define platform-specific IDs if they differ
-  bannerAndroid: __DEV__ ? TestIds.BANNER : 'ca-app-pub-7038105706744077/7180078839',
-  bannerIOS: __DEV__ ? TestIds.BANNER : 'YOUR_IOS_BANNER_AD_UNIT_ID', // Replace with your actual iOS banner ID
-  interstitialAndroid: __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-7038105706744077/9848003572',
-  interstitialIOS: __DEV__ ? TestIds.INTERSTITIAL : 'YOUR_IOS_INTERSTITIAL_AD_UNIT_ID' // Replace with your actual iOS interstitial ID
+  // Banner Ad Units
+  // Android Banner (androidAd1)
+  bannerAndroid: 'ca-app-pub-7038105706744077/8794313337',
+
+  // iOS Banner (ad1)
+  bannerIOS: 'ca-app-pub-7038105706744077/7180078839',
+
+  // Interstitial Ad Units
+  // Android Interstitial (bigandroid2)
+  interstitialAndroid: 'ca-app-pub-7038105706744077/7538121739',
+
+  // iOS Interstitial (ad2)
+  interstitialIOS: 'ca-app-pub-7038105706744077/9848003572'
 };
 
 const BlackjackCounter: React.FC<BlackjackCounterProps> = () => {
@@ -58,20 +65,23 @@ const BlackjackCounter: React.FC<BlackjackCounterProps> = () => {
   };
 
 // Inside your BlackjackCounter component
-// ... (your existing state and other functions) ...
 
-// Ad Unit IDs (ensure these are correctly defined at the top of your file)
+// Ad Unit IDs - These are your LIVE production Ad Unit IDs for both Android and iOS.
 const adUnitIds = {
   // Banner Ad Units
-  bannerAndroid: __DEV__ ? TestIds.BANNER : 'ca-app-pub-7038105706744077/7180078839', // Your real Android banner ID
-  bannerIOS: __DEV__ ? TestIds.BANNER : 'YOUR_IOS_BANNER_AD_UNIT_ID', // Replace with your actual iOS banner ID
+  // Android Banner: 'androidAd1'
+  bannerAndroid: 'ca-app-pub-7038105706744077/8794313337',
+
+  // iOS Banner: 'ad1'
+  bannerIOS: 'ca-app-pub-7038105706744077/7180078839',
 
   // Interstitial Ad Units
-  interstitialAndroid: __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-7038105706744077/9848003572', // Your real Android interstitial ID
-  interstitialIOS: __DEV__ ? TestIds.INTERSTITIAL : 'YOUR_IOS_INTERSTITIAL_AD_UNIT_ID' // Replace with your actual iOS interstitial ID
-};
+  // Android Interstitial: 'bigandroid2'
+  interstitialAndroid: 'ca-app-pub-7038105706744077/7538121739',
 
-// ... (your other state and functions) ...
+  // iOS Interstitial: 'ad2'
+  interstitialIOS: 'ca-app-pub-7038105706744077/9848003572'
+};
 
 // Initialize interstitial ad for react-native-google-mobile-ads
 useEffect(() => {
